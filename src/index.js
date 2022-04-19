@@ -9,9 +9,9 @@ class ToDoApp extends React.Component {
         return(
             <section id="todo">
                 <div className="banner">
-                    <img src="../public/todo_logo.png" alt="todo logo" />
+                    <img src="../public/todo_logo.png" alt="todo check" />
                     <h1>My ToDo App</h1>
-                    <img src="../public/todo_img.png" alt="todo image" />
+                    <img src="../public/todo_img.png" alt="todo people" />
                 </div>
                 <ul className="list-group m-3">
                     <h3 className="list-group-item list-title">Professional</h3>
