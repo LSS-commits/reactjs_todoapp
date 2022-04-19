@@ -1,17 +1,70 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Ancienne méthode
+// import ReactDOM from 'react-dom/client';
+// Depuis React 18
+import { createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+class ToDoApp extends React.Component {
+    render(){
+        return(
+            <section id="todo">
+                <div className="banner">
+                    <img src="../public/todo_logo.png" alt="todo logo" />
+                    <h1>My ToDo App</h1>
+                    <img src="../public/todo_img.png" alt="todo image" />
+                </div>
+                <ul className="list-group m-3">
+                    <h3 className="list-group-item list-title">Professional</h3>
+                    <li className="list-group-item d-flex align-items-center">
+                        Study offers
+                        <button className="btn btn-sm ml-auto btn-info">&#x2714;</button>
+                    </li>
+                    <li className="list-group-item d-flex align-items-center">
+                        Sign contract
+                        <button className="btn btn-sm ml-auto btn-info">&#x2714;</button>
+                    </li>
+                    <li className="list-group-item d-flex align-items-center">
+                        Finish project roadmap
+                        <button className="btn btn-sm ml-auto btn-info">&#x2714;</button>
+                    </li>
+                </ul>
+                <ul className="list-group m-3">
+                    <h3 className="list-group-item list-title">Personal</h3>
+                    <li className="list-group-item d-flex align-items-center">
+                        Wash dishes
+                        <button className="btn btn-sm ml-auto btn-info">&#x2714;</button>
+                    </li>
+                    <li className="list-group-item d-flex align-items-center">
+                        Cardio work out
+                        <button className="btn btn-sm ml-auto btn-info">&#x2714;</button>
+                    </li>
+                    <li className="list-group-item d-flex align-items-center">
+                        Do laundry
+                        <button className="btn btn-sm ml-auto btn-info">&#x2714;</button>
+                    </li>
+                </ul>
+                <footer className="d-flex justify-content-between p-3" id="mainFooter">
+                    <div className="btn-group">
+                        <a href="#" className="btn">List &#x2630;</a>
+                        <a href="#" className="btn">Completed &#x2714;</a>
+                        <a href="#" className="btn">Add &#x2b;</a>
+                    </div>
+                </footer>
+            </section>   
+        )
+    }
+}
+
+// Ancienne méthode 
+// ReactDOM.render(
+//     <ToDoApp />, document.getElementById('root')
+// )
+
+// Nouvelle méthode pour injecter dans le DOM (à partir de React 18)
+const container = document.getElementById('root')
+const root = createRoot(container)
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <React.StrictMode>
+    <ToDoApp />
+    </React.StrictMode>
+)
