@@ -3,6 +3,9 @@ import React from 'react';
 // import ReactDOM from 'react-dom/client';
 // Depuis React 18
 import { createRoot } from 'react-dom/client';
+// Import de Bootstrap et icônes FontAw
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {FaListAlt, FaCheckSquare, FaPlusSquare, FaTrash} from 'react-icons/fa';
 // Pour afficher images grâce à webpack, via import statement
 import todoLogo from './assets/todo_logo.png';
 import todoImg from './assets/todo_img.png';
@@ -48,10 +51,11 @@ class ToDoApp extends React.Component {
                 </ul>
                 <footer className="d-flex justify-content-between p-3" id="mainFooter">
                     <div className="btn-group">
-                        <a href="#" className="btn">List &#x2630;</a>
-                        <a href="#" className="btn">Completed &#x2714;</a>
-                        <a href="#" className="btn">Add &#x2b;</a>
+                        <a href="#" className="btn">List <FaListAlt /></a>
+                        <a href="#" className="btn">Completed <FaCheckSquare /></a>
+                        <a href="#" className="btn">Add <FaPlusSquare /></a>
                     </div>
+                    <button className="btn"><FaTrash /></button>
                 </footer>
             </section>   
         )
