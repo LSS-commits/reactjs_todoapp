@@ -3,15 +3,18 @@ import React from 'react';
 // import ReactDOM from 'react-dom/client';
 // Depuis React 18
 import { createRoot } from 'react-dom/client';
+// Pour afficher images grâce à webpack, via import statement
+import todoLogo from './assets/todo_logo.png';
+import todoImg from './assets/todo_img.png';
 
 class ToDoApp extends React.Component {
     render(){
         return(
             <section id="todo">
                 <div className="banner">
-                    <img src="../public/todo_logo.png" alt="todo check" />
+                    <img src={todoLogo} alt="todo check" />
                     <h1>My ToDo App</h1>
-                    <img src="../public/todo_img.png" alt="todo people" />
+                    <img src={todoImg} alt="todo people" />
                 </div>
                 <ul className="list-group m-3">
                     <h3 className="list-group-item list-title">Professional</h3>
