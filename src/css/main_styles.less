@@ -1,0 +1,90 @@
+/* CSS LESS */
+
+// Polices importées
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap');;
+
+// Mes couleurs
+@color1 : #FFFFFF;
+@color2 : #3d3d3d;
+@color3 : #61dafb;
+@color4 : #edd831;
+@font-fam : 'Noto Sans', Arial, Helvetica, sans-serif;
+
+
+/* TUTO_REACT */
+// Variables qui stockent le style pour mes éléments html
+@my-body : .tuto_react;
+@my-title : h1;
+@my-image : img;
+
+@{my-body} {
+    background-color: #ececec;
+    text-align: center;
+    font-family: @font-fam;
+
+    @{my-title} {
+        margin: 0 auto;
+        color: @color3;
+        background-color: @color2;
+        padding: 15px;
+        border-radius: 2.5px;
+    }
+
+    @{my-image} {
+        height: 200px;
+        width: auto;
+        margin: 15px;
+    }
+
+    p {
+        font-weight: 700;  
+        color: @color2;
+    }
+}
+
+
+/* TODO LIST */
+#todo {
+    color: @color2;
+    font-family: @font-fam;
+    font-weight: 300;
+    text-align: center;
+
+    h1, h2, h3, h4, h5, h6 {
+        padding: 15px;
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+        margin: 15px;
+    }
+
+    .list-title {
+        border: none;
+    }
+
+    li {
+        justify-content: space-between;
+    }
+
+    .list-group-item .btn:hover {
+        color: @color2;
+        background-color: @color1;
+    }
+
+    #mainFooter {
+    background-color: @color2;
+        .btn-group {
+            margin: 0 auto;
+            .btn {
+                background-color: @color1;
+                border: 2.5px solid @color3;
+            }
+            .btn:hover {
+                color: @color1;
+                background-color: @color2;
+            }
+        }
+    }
+}
