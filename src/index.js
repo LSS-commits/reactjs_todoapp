@@ -5,7 +5,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 // Import de Bootstrap et icônes FontAw
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/main_styles.less';
 import {FaListAlt, FaCheckSquare, FaPlusSquare, FaTrash} from 'react-icons/fa';
 // Pour afficher images grâce à webpack, via import statement
 import todoLogo from './assets/todo_logo.png';
