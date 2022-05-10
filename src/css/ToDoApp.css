@@ -1,0 +1,81 @@
+/* CSS LESS */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v27/o-0NIpQlx3QUlC5A4PNjThZlYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
+}
+/* TUTO_REACT */
+.tuto_react {
+  background-color: #ececec;
+  text-align: center;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+}
+.tuto_react h1 {
+  margin: 0 auto;
+  color: #61dafb;
+  background-color: #3d3d3d;
+  padding: 15px;
+  border-radius: 2.5px;
+}
+.tuto_react img {
+  height: 200px;
+  width: auto;
+  margin: 15px;
+}
+.tuto_react p {
+  font-weight: 700;
+  color: #3d3d3d;
+}
+/* TODO LIST */
+#todo {
+  color: #3d3d3d;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+#todo h1,
+#todo h2,
+#todo h3,
+#todo h4,
+#todo h5,
+#todo h6 {
+  padding: 15px;
+}
+#todo img {
+  height: 200px;
+  width: auto;
+  margin: 15px;
+}
+#todo .list-title {
+  border: none;
+}
+#todo li {
+  justify-content: space-between;
+}
+#todo .list-group-item .btn:hover {
+  color: #3d3d3d;
+  background-color: #FFFFFF;
+}
+#todo #mainFooter {
+  background-color: #3d3d3d;
+}
+#todo #mainFooter .btn-group {
+  margin: 0 auto;
+}
+#todo #mainFooter .btn-group .btn {
+  background-color: #FFFFFF;
+  border: 2.5px solid #61dafb;
+}
+#todo #mainFooter .btn-group .btn:hover {
+  color: #FFFFFF;
+  background-color: #3d3d3d;
+}
