@@ -13,4 +13,4 @@ const NavBar = () => (
     </footer>
 )
 
-export default NavBar
+export default NavBar;

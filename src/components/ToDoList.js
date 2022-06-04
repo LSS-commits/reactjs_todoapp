@@ -35,4 +35,4 @@ const ToDoList = () => (
     </div>
 )
 
-export default ToDoList
+export default ToDoList;
