@@ -5,10 +5,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 // Import de Bootstrap et icônes FontAw
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/ToDoApp.css';
-import ToDoApp from './components/ToDoApp';
-
-
+import './css/App.css';
+import App from './components/App';
 
 // Ancienne méthode 
 // ReactDOM.render(
@@ -20,6 +18,6 @@ const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
     <React.StrictMode>
-    <ToDoApp />
+    <App />
     </React.StrictMode>
 )

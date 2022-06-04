@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
 import {FaListAlt, FaCheckSquare, FaPlusSquare, FaTrash} from 'react-icons/fa';
 
-const Navbar = () => {
+
+const NavBar = () => (
     <footer className="d-flex justify-content-between p-3" id="mainFooter">
         <div className="btn-group">
             <a href="" className="btn">List <FaListAlt /></a>
@@ -10,6 +11,6 @@ const Navbar = () => {
         </div>
         <button className="btn"><FaTrash /></button>
     </footer>
-}
+)
 
-export default Navbar;
+export default NavBar

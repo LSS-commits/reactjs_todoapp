@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const ToDoList = () => {
+const ToDoList = () => (
     <div>
         <ul className = "list-group m-3" >
             <h3 className = "list-group-item list-title" > Professional </h3> 
@@ -33,6 +33,6 @@ const ToDoList = () => {
             </li> 
         </ul>
     </div>
-}
+)
 
-export default ToDoList;
+export default ToDoList
