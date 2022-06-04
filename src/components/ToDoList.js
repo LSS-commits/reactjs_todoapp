@@ -1,7 +1,8 @@
 import React from "react";
 
 const ToDoList = () => (
-    <div>
+    // React.fragment
+    <>
         <ul className = "list-group m-3" >
             <h3 className = "list-group-item list-title" > Professional </h3> 
             <li className = "list-group-item d-flex align-items-center" >
@@ -32,7 +33,7 @@ const ToDoList = () => (
             <button className = "btn btn-sm ml-auto btn-info" > &#x2714; </button> 
             </li> 
         </ul>
-    </div>
+    </>
 )
 
 export default ToDoList;
