@@ -1,7 +1,9 @@
 import React from "react";
 
 const ToDoList = () => (
-    // React.fragment
+    /* <React.Fragment></React.Fragment>
+    or <></> to wrap all elements into one
+    */
     <>
         <ul className = "list-group m-3" >
             <h3 className = "list-group-item list-title" > Professional </h3> 
