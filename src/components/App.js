@@ -22,10 +22,11 @@ class App extends React.Component {
                         <Routes>
                             {/* when url = add task, display add task component */}
                             <Route path="/add-task" element={<AddTask />}/>
+                            {/* /:filter to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed */}
                             <Route path="/" element={<ToDoList />}/>
                         </Routes>
+                        <NavBar/>
                     </BrowserRouter>
-                    <NavBar/>
                 {/* <ToDoList/>
                  Now use with routing */}
                 </React.StrictMode>
