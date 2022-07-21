@@ -1,9 +1,12 @@
 import React from 'react';
 import ToDoList from './ToDoList';
 import NavBar from './NavBar';
-// To display images with webpack, via import statement
+import AddTask from './AddTask';
+// to display images with webpack, via import statement
 import todoLogo from '../assets/todo_logo.png';
 import todoImg from '../assets/todo_img.png';
+// to use react router
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 class App extends React.Component {
     render(){
@@ -15,8 +18,16 @@ class App extends React.Component {
                     <img src={todoImg} alt="todo people" />
                 </div>
                 <React.StrictMode>
-                <ToDoList/>
-                <NavBar/>
+                    <BrowserRouter>
+                        <Routes>
+                            {/* when url = add task, display add task component */}
+                            <Route path="/add-task" element={<AddTask />}/>
+                            <Route path="/" element={<ToDoList />}/>
+                        </Routes>
+                    </BrowserRouter>
+                    <NavBar/>
+                {/* <ToDoList/>
+                 Now use with routing */}
                 </React.StrictMode>
             </section>   
         )

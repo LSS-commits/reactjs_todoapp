@@ -79,3 +79,6 @@
   color: #FFFFFF;
   background-color: #3d3d3d;
 }
+#todo #addTask .add-task-form .form-floating:focus-within {
+  z-index: 2;
+}

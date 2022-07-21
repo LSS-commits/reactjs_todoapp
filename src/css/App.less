@@ -8,7 +8,11 @@
 @color2 : #3d3d3d;
 @color3 : #61dafb;
 @color4 : #edd831;
-@font-fam : 'Noto Sans', Arial, Helvetica, sans-serif;
+@color5 : #DC3545;
+@font-fam : 'Noto Sans',
+Arial,
+Helvetica,
+sans-serif;
 
 
 /* TUTO_REACT */
@@ -36,7 +40,7 @@
     }
 
     p {
-        font-weight: 700;  
+        font-weight: 700;
         color: @color2;
     }
 }
@@ -49,7 +53,12 @@
     font-weight: 300;
     text-align: center;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         padding: 15px;
     }
 
@@ -73,17 +82,27 @@
     }
 
     #mainFooter {
-    background-color: @color2;
+        background-color: @color2;
+
         .btn-group {
             margin: 0 auto;
+
             .btn {
                 background-color: @color1;
                 border: 2.5px solid @color3;
             }
+
             .btn:hover {
                 color: @color1;
                 background-color: @color2;
             }
         }
     }
+
+    #addTask {
+        .add-task-form .form-floating:focus-within {
+            z-index: 2;
+        }
+    }
+
 }

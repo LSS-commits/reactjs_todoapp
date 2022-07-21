@@ -7,9 +7,9 @@ const NavBar = () => (
     <footer className="d-flex justify-content-between p-3" id="mainFooter">
         <div className="btn-group">
             <IconContext.Provider value={{ color: "#3d3d3d"}}>
-                <a className="btn">List <FaListUl /></a>
-                <a className="btn">Completed <FaCheck/></a>
-                <a className="btn">Add <FaPlus/></a>
+                <a className="btn tdl-icon">List <FaListUl /></a>
+                <a className="btn tdl-icon">Completed <FaCheck/></a>
+                <a className="btn tdl-icon">Add <FaPlus/></a>
             </IconContext.Provider>
         </div>
             <IconContext.Provider value={{ color: "#ffffff"}}>
