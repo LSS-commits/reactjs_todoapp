@@ -1,8 +1,3 @@
-let titleData = [
-    {title: 'Professional'},
-    {title: 'Personal'}
-];
-
 let taskData = [
     {id: 'jsertu7a', name: 'Study offers', completed: false, category: 'Professional'},
     {id: 'jseruo7l', name: 'Sign contract', completed: false, category: 'Professional'},
@@ -12,4 +7,4 @@ let taskData = [
     {id: 'jserm1sj', name: 'Do laundry', completed: false, category: 'Personal'}
 ];
 
-export {titleData, taskData};
+export default taskData;
