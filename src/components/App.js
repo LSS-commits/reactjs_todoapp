@@ -16,7 +16,7 @@ class App extends React.Component {
             <section id="todo">
                 <div className="banner">
                     <img src={todoLogo} alt="todo check" />
-                    <h1>My ToDo App</h1>
+                    <h1>my ToDo App</h1>
                     <img src={todoImg} alt="todo people" />
                 </div>
                 <React.StrictMode>

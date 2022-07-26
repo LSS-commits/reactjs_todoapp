@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => (
-    <footer className="d-flex justify-content-between p-3" id="mainFooter">
+    <footer className="d-flex justify-content-center p-3" id="mainFooter">
         <div className="btn-group">
             <IconContext.Provider value={{ color: "#3d3d3d"}}>
                 {/* use NavLink to="" instead of a href="" with react router */}
@@ -15,8 +15,8 @@ const NavBar = () => (
                 <NavLink to="/add-task" className="btn">Add <FaPlus/></NavLink>
             </IconContext.Provider>
         </div>
-            <IconContext.Provider value={{ color: "#ffffff"}}>
-                <button className="btn trash"><FaTrashAlt /></button>
+            <IconContext.Provider value={{ color: "#DC3545", size: "20px"}}>
+                <button className="btn trash pe-0"><FaTrashAlt /></button>
             </IconContext.Provider>
     </footer>
 )

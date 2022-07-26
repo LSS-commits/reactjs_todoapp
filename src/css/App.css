@@ -21,7 +21,7 @@
 }
 .tuto_react h1 {
   margin: 0 auto;
-  color: #61dafb;
+  color: #54BDF4;
   background-color: #3d3d3d;
   padding: 15px;
   border-radius: 2.5px;
@@ -61,23 +61,26 @@
 #todo li {
   justify-content: space-between;
 }
+#todo .list-group-item .btn {
+  color: #3d3d3d;
+  background-color: #54BDF4;
+}
 #todo .list-group-item .btn:hover {
   color: #3d3d3d;
   background-color: #FFFFFF;
+  border: 1px solid #54BDF4;
+  transition: 0.3s ease-in-out;
 }
 #todo #mainFooter {
-  background-color: #3d3d3d;
-}
-#todo #mainFooter .btn-group {
-  margin: 0 auto;
+  background-color: #ededed;
 }
 #todo #mainFooter .btn-group .btn {
   background-color: #FFFFFF;
-  border: 2.5px solid #61dafb;
+  border: 0.5px solid #ededed;
 }
 #todo #mainFooter .btn-group .btn:hover {
-  color: #FFFFFF;
-  background-color: #3d3d3d;
+  color: #3d3d3d;
+  background-color: #54BDF4;
   transition: 0.3s ease-in-out;
 }
 #todo #addTask .add-task-form .form-floating:focus-within {
