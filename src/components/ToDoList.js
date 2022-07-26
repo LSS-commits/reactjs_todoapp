@@ -2,53 +2,37 @@ import React from "react";
 import ToDoData from "./ToDoData";
 
 // destructurate props to use only tasks created in DynamicData and called in App in the routes
-const ToDoList = ({tasks}) => (
+const ToDoList = ({tasks, titles}) => (
     /* <React.Fragment></React.Fragment>
     or <></> to wrap all elements into one
     */
     <>
-            {/* <li className = "list-group-item d-flex align-items-center" >
-            Study offers 
-            <button className = "btn btn-sm ml-auto btn-info" > &#x2714; </button> 
-            </li> 
-            <li className = "list-group-item d-flex align-items-center" >
-            Sign contract 
-            <button className = "btn btn-sm ml-auto btn-info" > &#x2714; </button> 
-            </li> 
-            <li className = "list-group-item d-flex align-items-center" >
-            Finish project roadmap 
-            <button className = "btn btn-sm ml-auto btn-info" > &#x2714; </button> 
-            </li>  */}
-
-        <ul className = "list-group m-3">
-            <h3 className = "list-group-item list-title" > Professional </h3> 
-            {  
-            /* map in js function from the Array Object that enables you to execute a function for each element of an array */
-                tasks.map((task) => 
-                {
-                    if(task.category === "Professional"){
-                        return <ToDoData task={task} />
+        {
+            // for each category title, display list of tasks with the corresponding category
+            titles.map((title) => 
+                <ul className = "list-group m-3" key={title.id}>
+                    <h3 className = "list-group-item list-title" > {title.name} </h3> 
+                    {  
+                    /* map in js function from the Array Object that enables you to execute a function for each element of an array */
+                        tasks.map((task) => 
+                            {
+                                if(task.category === title.name){
+                                    return <ToDoData task={task} key={task.id} />
+                                }else{
+                                    return ''
+                                }
+                            }
+                        )
                     }
-                })
-
-            }
-        </ul> 
+                </ul> 
+            )
+        }
             
-
-        <ul className = "list-group m-3">
-            <h3 className = "list-group-item list-title" > Personal </h3> 
-            {  
-                /* map in js function from the Array Object that enables you to execute a function for each element of an array */
-                    tasks.map((task) => 
-                    {
-                        if(task.category === "Personal"){
-                            return <ToDoData task={task} />
-                        }
-                    })
-
-                }
-        </ul> 
     </>
 )
 
 export default ToDoList;
+
+
+
+

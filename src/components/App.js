@@ -8,7 +8,7 @@ import todoImg from '../assets/todo_img.png';
 // to use react router dom v5.3.0 (v6 doesn't work for this tutorial)
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // to import my dynamic data
-import taskData from '../DynamicData';
+import {categoryData, taskData}  from '../DynamicData';
 
 class App extends React.Component {
     render(){
@@ -25,7 +25,7 @@ class App extends React.Component {
                             {/* when url = add task, display add task component */}
                             <Route path="/add-task" component={AddTask} />
                             {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
-                            <Route path="/:filter?" render={(props) => <ToDoList {...props} tasks={taskData}/>}/>
+                            <Route path="/:filter?" render={(props) => <ToDoList {...props} titles={categoryData} tasks={taskData}/>}/>
                         </Switch>
                         <NavBar/>
                     </BrowserRouter>
