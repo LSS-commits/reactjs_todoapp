@@ -7,6 +7,8 @@ import todoLogo from '../assets/todo_logo.png';
 import todoImg from '../assets/todo_img.png';
 // to use react router
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// to import my dynamic data
+import {initialData, IDtitles} from '../initialData';
 
 class App extends React.Component {
     render(){
@@ -22,13 +24,12 @@ class App extends React.Component {
                         <Routes>
                             {/* when url = add task, display add task component */}
                             <Route path="/add-task" element={<AddTask />}/>
-                            {/* /:filter to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed */}
-                            <Route path="/" element={<ToDoList />}/>
+                            {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
+                            {/* <Route path="/" element={<ToDoList />}/> */}
+                            <Route path="" render={(props) => <ToDoList {...props} tasks={initialData} titles={IDtitles}/> } element={<ToDoList />}/>
                         </Routes>
                         <NavBar/>
                     </BrowserRouter>
-                {/* <ToDoList/>
-                 Now use with routing */}
                 </React.StrictMode>
             </section>   
         )
