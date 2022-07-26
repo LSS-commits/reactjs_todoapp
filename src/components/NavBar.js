@@ -11,7 +11,7 @@ const NavBar = () => (
             <IconContext.Provider value={{ color: "#3d3d3d"}}>
                 {/* use NavLink to="" instead of a href="" with react router */}
                 <NavLink to="/" className="btn">List <FaListUl /></NavLink>
-                {/* <NavLink to="/completed" className="btn">Completed <FaCheck/></NavLink> */}
+                <NavLink to="/completed" className="btn">Completed <FaCheck/></NavLink>
                 <NavLink to="/add-task" className="btn">Add <FaPlus/></NavLink>
             </IconContext.Provider>
         </div>

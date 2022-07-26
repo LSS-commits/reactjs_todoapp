@@ -5,10 +5,10 @@ import AddTask from './AddTask';
 // to display images with webpack, via import statement
 import todoLogo from '../assets/todo_logo.png';
 import todoImg from '../assets/todo_img.png';
-// to use react router
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// to use react router dom v5.3.0 (v6 doesn't work for this tutorial)
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // to import my dynamic data
-import {initialData, IDtitles} from '../initialData';
+import {titleData, taskData} from '../DynamicData';
 
 class App extends React.Component {
     render(){
@@ -21,13 +21,12 @@ class App extends React.Component {
                 </div>
                 <React.StrictMode>
                     <BrowserRouter>
-                        <Routes>
+                        <Switch>
                             {/* when url = add task, display add task component */}
-                            <Route path="/add-task" element={<AddTask />}/>
+                            <Route path="/add-task" component={AddTask} />
                             {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
-                            {/* <Route path="/" element={<ToDoList />}/> */}
-                            <Route path="" render={(props) => <ToDoList {...props} tasks={initialData} titles={IDtitles}/> } element={<ToDoList />}/>
-                        </Routes>
+                            <Route path="/:filter?" render={(props) => <ToDoList {...props} titles={titleData} tasks={taskData}/>}/>
+                        </Switch>
                         <NavBar/>
                     </BrowserRouter>
                 </React.StrictMode>
