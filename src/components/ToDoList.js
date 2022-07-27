@@ -3,7 +3,7 @@ import ToDo from "./ToDo";
 
 // destructurate props to use only tasks created in DynamicData and called in App in the routes
 const ToDoList = ({tasks, titles, match}) => {
-    // filter tasks = completed or not
+    // filtered tasks = completed or not
     let filteredTasks;
     switch (match.params.filter) {
         case 'completed':
@@ -17,7 +17,7 @@ const ToDoList = ({tasks, titles, match}) => {
         return (
             <>
                 <ul className = "list-group m-3">
-                    <h3 className = "list-group-item list-title" > No task added </h3> 
+                    <h3 className = "list-group-item list-title" > No task completed </h3> 
                 </ul>
             </>
         )
