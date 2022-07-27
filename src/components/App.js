@@ -23,7 +23,8 @@ class App extends React.Component {
                     <BrowserRouter>
                         <Switch>
                             {/* when url = add task, display add task component */}
-                            <Route path="/add-task" component={AddTask} />
+                            <Route path="/add-task" render={(props) => <AddTask {...props} titles={categoryData} />}/>
+                            {/* <Route path="/add-task" component={AddTask}/> */}
                             {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
                             <Route path="/:filter?" render={(props) => <ToDoList {...props} titles={categoryData} tasks={taskData}/>}/>
                         </Switch>
