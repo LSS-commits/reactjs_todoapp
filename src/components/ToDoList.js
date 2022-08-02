@@ -2,73 +2,53 @@ import React from "react";
 import ToDo from "./ToDo";
 
 // destructurate props to use only tasks created in DynamicData and called in App in the routes
-const ToDoList = ({tasks, titles, match}) => {
+const ToDoList = ({tasks, match}) => {
 
-    // try another switch depending on the category ???
-    let tasksByCategory;
+        return(
+            
+            // loop on taskData and display list of tasks by title
+            tasks.map((task) => {
 
-    switch (tasks) {
-        
-        case 'Professional':
-            tasksByCategory = tasks.filter(task => task.category);
-            break;
-        case 'Personal':
-            tasksByCategory = tasks.filter(task => task.category);
-            break;
-        default:
+                /* filter list of tasks for each title 
+                => if task is completed, display on /completed page
+                => if not, display on / page */
+                let filteredTasks;
+                switch (match.params.filter) {
+                    case 'completed':
+                        filteredTasks = task.list.filter(item => item.completed);
+                        break;
+                    default:
+                        filteredTasks = task.list;
+                }
 
-            tasksByCategory = tasks;
-    };
-    
+                if (filteredTasks.length === 0) {
+                    return (
+                        <>
+                            <ul className="list-group m-3" key={task.id}>
+                                <h3 className="list-group-item list-title">{task.title}</h3>
+                                <p className="text-muted fst-italic">No task completed</p>
+                            </ul>
+                        </>
+                    )
+                } else {
+                    return (
+                        <>
+                            <ul className="list-group m-3" key={task.id}>
+                                <h3 className="list-group-item list-title">{task.title}</h3> 
+                                {
+                                    filteredTasks.map((item) => <ToDo key={item.taskId} item={item}/>)
+                                }
+                            </ul>
+                        </>
+                    )
+                }
+                // end else
+            })
+            // end tasks map
 
- // filtered tasks = completed or not
- let filteredTasks;
- switch (match.params.filter) {
-     case 'completed':
-         filteredTasks = tasks.filter(task => task.completed);
-         break;
-     default:
-         filteredTasks = tasks;
- };
- 
- if(filteredTasks.length === 0){
-     return (
-         <>
-             <ul className = "list-group m-3">
-                 <h3 className = "list-group-item list-title" > No task completed </h3> 
-             </ul>
-         </>
-     )
- }else{
-     return (
-         /* <React.Fragment></React.Fragment>
-         or <></> to wrap all elements into one
-         */
-         <>
-             {
-                 // for each category title, display list of tasks with the corresponding category
-                 titles.map((title) => 
-                     <ul className = "list-group m-3" key={title.id}>
-                         <h3 className = "list-group-item list-title" > {title.name} </h3> 
-                         {  
-                         /* map in js function from the Array Object that enables you to execute a function for each element of an array */
-                             filteredTasks.map((task) => 
-                                 {
-                                     if(task.category === title.name){
-                                         return <ToDo task={task} key={task.id} />
-                                     }else{
-                                         return ''
-                                     }
-                                 }
-                             )
-                         }
-                     </ul> 
-                 )
-             }
-                 
-         </>
-     )
- }
+        );
+        // end todolist return
+
 }
 
 export default ToDoList;  
