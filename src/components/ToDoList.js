@@ -23,23 +23,19 @@ const ToDoList = ({tasks, match}) => {
 
                 if (filteredTasks.length === 0) {
                     return (
-                        <>
                             <ul className="list-group m-3" key={task.id}>
                                 <h3 className="list-group-item list-title">{task.title}</h3>
                                 <p className="text-muted fst-italic">No task completed</p>
                             </ul>
-                        </>
                     )
                 } else {
                     return (
-                        <>
                             <ul className="list-group m-3" key={task.id}>
                                 <h3 className="list-group-item list-title">{task.title}</h3> 
                                 {
                                     filteredTasks.map((item) => <ToDo key={item.taskId} item={item}/>)
                                 }
                             </ul>
-                        </>
                     )
                 }
                 // end else
