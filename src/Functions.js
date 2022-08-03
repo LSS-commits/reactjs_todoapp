@@ -12,7 +12,7 @@ const shrinkFunction = () => {
         const image = document.getElementById("todoImg");
         
         // TODO: solve marginTop pb
-        const pageContent = document.getElementById("pageContent");
+        // const pageContent = document.getElementById("pageContent");
 
         if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
             // banner.style.height = "100px";
