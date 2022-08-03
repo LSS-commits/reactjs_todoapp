@@ -9,7 +9,8 @@ import './css/App.css';
 const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
-    <React.StrictMode>
+    // REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION
+    // <React.StrictMode>
     <App />
-    </React.StrictMode>
+    // </React.StrictMode>
 )

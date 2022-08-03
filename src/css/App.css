@@ -27,7 +27,7 @@
   border-radius: 2.5px;
 }
 .tuto_react img {
-  height: 200px;
+  height: 50px;
   width: auto;
   margin: 15px;
 }
@@ -41,6 +41,7 @@
   font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
   font-weight: 300;
   text-align: center;
+  margin-top: 50px;
 }
 #todo h1,
 #todo h2,
@@ -51,12 +52,17 @@
   padding: 15px;
 }
 #todo img {
-  height: 200px;
+  height: 180px;
   width: auto;
   margin: 15px;
 }
+#todo .no-task,
 #todo .list-title {
   border: none;
+}
+#todo .list-title {
+  font-weight: 700;
+  color: #3d3d3d;
 }
 #todo li {
   justify-content: space-between;
@@ -70,6 +76,9 @@
   background-color: #FFFFFF;
   border: 1px solid #54BDF4;
   transition: 0.3s ease-in-out;
+}
+#todo .page-content {
+  margin-bottom: 120px;
 }
 #todo #mainFooter {
   background-color: #ededed;

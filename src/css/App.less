@@ -34,7 +34,7 @@
     }
 
     @{my-image} {
-        height: 200px;
+        height: 50px;
         width: auto;
         margin: 15px;
     }
@@ -52,6 +52,7 @@
     font-family: @font-fam;
     font-weight: 300;
     text-align: center;
+    margin-top: 50px;
 
     h1,
     h2,
@@ -63,13 +64,18 @@
     }
 
     img {
-        height: 200px;
+        height: 180px;
         width: auto;
         margin: 15px;
     }
 
-    .list-title {
+    .no-task, .list-title {
         border: none;
+    }
+
+    .list-title {
+        font-weight: 700;
+        color: @color2;
     }
 
     li {
@@ -86,6 +92,11 @@
         background-color: @color1;
         border: 1px solid @color3;
         transition: 0.3s ease-in-out;
+    }
+    
+    // add bottom margin before fixed-bottom navbar
+    .page-content {      
+        margin-bottom: 120px;
     }
 
     #mainFooter {

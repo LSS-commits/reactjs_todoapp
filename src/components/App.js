@@ -1,6 +1,6 @@
 import React from 'react';
-import ToDoList from './ToDoList';
 import NavBar from './NavBar';
+import ToDoList from './ToDoList';
 import AddTask from './AddTask';
 // to display images with webpack, via import statement
 import todoLogo from '../assets/todo_logo.png';
@@ -19,19 +19,20 @@ class App extends React.Component {
                     <h1>my ToDo App</h1>
                     <img src={todoImg} alt="todo people" />
                 </div>
-                <React.StrictMode>
+                {/* REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION */}
+                {/* <React.StrictMode> */}
                     <BrowserRouter>
+                    <div className="page-content">
                         <Switch>
-                            {/* when url = add task, display add task component */}
                             <Route path="/add-task" render={(props) => <AddTask {...props} titles={categoryData} />}/>
                             {/* <Route path="/add-task" component={AddTask}/> */}
-                            {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
-                            {/* <Route path="/:filter?" render={(props) => <ToDoList {...props} titles={categoryData} tasks={taskData}/>}/> */}
+                            {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed. DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
                             <Route path="/:filter?" render={(props) => <ToDoList {...props} tasks={taskData}/>}/>
                         </Switch>
+                    </div>
                         <NavBar/>
                     </BrowserRouter>
-                </React.StrictMode>
+                {/* </React.StrictMode> */}
             </section>   
         )
     }
