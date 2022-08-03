@@ -77,7 +77,18 @@
   border: 1px solid #54BDF4;
   transition: 0.3s ease-in-out;
 }
-#todo .page-content {
+#todo #todoBanner {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  position: fixed;
+  /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0;
+  /* At the top */
+  z-index: 99;
+}
+#todo #pageContent {
+  margin-top: 500px;
   margin-bottom: 120px;
 }
 #todo #mainFooter {

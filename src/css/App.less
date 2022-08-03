@@ -93,9 +93,20 @@
         border: 1px solid @color3;
         transition: 0.3s ease-in-out;
     }
+
+    // banner shrinks on scroll (only display small logo) + check Functions.js code
+    #todoBanner {
+        overflow: hidden;
+        background-color: @color1;
+        position: fixed; /* Sticky/fixed navbar */
+        width: 100%;
+        top: 0; /* At the top */
+        z-index: 99; 
+    }
     
     // add bottom margin before fixed-bottom navbar
-    .page-content {      
+    #pageContent {  
+        margin-top: 500px;  
         margin-bottom: 120px;
     }
 
