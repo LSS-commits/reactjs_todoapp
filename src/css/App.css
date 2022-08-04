@@ -103,6 +103,18 @@
   background-color: #54BDF4;
   transition: 0.3s ease-in-out;
 }
+#todo #homePage {
+  padding: 50px 25px;
+}
+#todo #homePage .get-started {
+  background-color: #54BDF4;
+}
+#todo #homePage .get-started:hover {
+  color: #3d3d3d;
+  background-color: #FFFFFF;
+  border: 1px solid #54BDF4;
+  transition: 0.3s ease-in-out;
+}
 #todo #addTask .add-task-form .form-floating:focus-within {
   z-index: 2;
 }

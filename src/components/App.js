@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Home from './Home';
 import ToDoList from './ToDoList';
 import AddTask from './AddTask';
 // to display images with webpack, via import statement
@@ -27,14 +28,15 @@ class App extends React.Component {
                 {/* REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION */}
                 {/* <React.StrictMode> */}
                     <BrowserRouter>
-                    <div id="pageContent">
-                        <Switch>
-                            <Route path="/add-task" render={(props) => <AddTask {...props} titles={categoryData} />}/>
-                            {/* <Route path="/add-task" component={AddTask}/> */}
-                            {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed. DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
-                            <Route path="/:filter?" render={(props) => <ToDoList {...props} tasks={taskData}/>}/>
-                        </Switch>
-                    </div>
+                        <div id="pageContent">
+                            <Switch>
+                                <Route path="/todo/add-task" render={(props) => <AddTask {...props} titles={categoryData} />}/>
+                                {/* <Route path="/add-task" component={AddTask}/> */}
+                                {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed. DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
+                                <Route path="/todo/:filter?" render={(props) => <ToDoList {...props} tasks={taskData}/>}/>
+                                <Route path="/" component={Home}/>
+                            </Switch>
+                        </div>
                         <NavBar/>
                     </BrowserRouter>
                 {/* </React.StrictMode> */}
