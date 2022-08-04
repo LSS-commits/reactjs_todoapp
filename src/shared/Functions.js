@@ -1,4 +1,7 @@
 // shrink banner (only display small logo) on scroll + check css code
+
+// TODO: change main header color on scroll ?
+
 const shrinkFunction = () => {
 
     window.onscroll = function () {
@@ -39,6 +42,10 @@ const shrinkFunction = () => {
         }
     }
 };
+
+// TODO: get main footer height to set margin-bottom on page content
+
+
 
 export {
     shrinkFunction

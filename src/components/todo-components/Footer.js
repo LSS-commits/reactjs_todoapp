@@ -4,7 +4,7 @@ import {FaListUl, FaCheck, FaPlus, FaTrashAlt} from 'react-icons/fa';
 // to generate links compatible with React
 import { NavLink } from "react-router-dom";
 
-const NavBar = () => (
+const Footer = () => (
     <footer className="d-flex justify-content-center p-3 fixed-bottom" id="mainFooter">
         <div className="btn-group">
             <IconContext.Provider value={{ color: "#3d3d3d"}}>
@@ -19,4 +19,4 @@ const NavBar = () => (
     </footer>
 )
 
-export default NavBar;
+export default Footer;

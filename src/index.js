@@ -5,6 +5,7 @@ import App from './components/App';
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
+import './css/ResponsiveApp.css'
 
 const container = document.getElementById('root')
 const root = createRoot(container)

@@ -13,48 +13,65 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
 }
-/* TUTO_REACT */
-.tuto_react {
-  background-color: #ececec;
-  text-align: center;
+.gradient1 {
+  background-color: #045de9;
+  background-image: -moz-linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
+  background-image: -webkit-linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
+  background-image: linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
+}
+#root {
+  height: 100vh;
+  background-color: #FFFFFF;
   font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
-}
-.tuto_react h1 {
-  margin: 0 auto;
-  color: #54BDF4;
-  background-color: #3d3d3d;
-  padding: 15px;
-  border-radius: 2.5px;
-}
-.tuto_react img {
-  height: 50px;
-  width: auto;
-  margin: 15px;
-}
-.tuto_react p {
-  font-weight: 700;
   color: #3d3d3d;
 }
-/* TODO LIST */
-#todo {
-  color: #3d3d3d;
-  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 50px;
-}
-#todo h1,
-#todo h2,
-#todo h3,
-#todo h4,
-#todo h5,
-#todo h6 {
-  padding: 15px;
-}
-#todo img {
+#root img {
   height: 180px;
   width: auto;
   margin: 15px;
+}
+#root h1,
+#root h2,
+#root h3,
+#root h4,
+#root h5,
+#root h6 {
+  padding: 15px;
+}
+/* LANDING PAGE */
+#homePage {
+  text-align: center;
+  height: inherit;
+  margin: 0 auto;
+}
+#homePage #homePageBanner {
+  padding: 20px 0 20px 0;
+}
+#homePage #homePageCTA .get-started {
+  background-color: #54BDF4;
+}
+#homePage #homePageCTA .get-started:hover {
+  color: #3d3d3d;
+  background-color: #FFFFFF;
+  border: 1px solid #54BDF4;
+  transition: 0.3s ease-in-out;
+}
+#homePage footer {
+  background-color: #045de9;
+  background-image: -moz-linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
+  background-image: -webkit-linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
+  background-image: linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
+  margin-top: 50px;
+  padding: 1rem;
+}
+#homePage footer .homePageFooterIcons {
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+/* TODO PAGES */
+#todo {
+  font-weight: 300;
+  text-align: center;
 }
 #todo .no-task,
 #todo .list-title {
@@ -77,19 +94,27 @@
   border: 1px solid #54BDF4;
   transition: 0.3s ease-in-out;
 }
-#todo #todoBanner {
-  overflow: hidden;
-  background-color: #FFFFFF;
-  position: fixed;
-  /* Sticky/fixed navbar */
-  width: 100%;
-  top: 0;
-  /* At the top */
-  z-index: 99;
+#todo #mainHeader {
+  position: sticky;
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
-#todo #pageContent {
-  margin-top: 500px;
-  margin-bottom: 120px;
+#todo #mainHeader .header-inner {
+  height: 70px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+#todo #mainHeader .header-inner #headerLogo {
+  height: 50px;
+  width: auto;
+  margin: 0;
+}
+#todo #mainHeader .header-inner .header.icon {
+  float: right;
 }
 #todo #mainFooter {
   background-color: #ededed;
@@ -101,18 +126,6 @@
 #todo #mainFooter .btn-group .btn:hover {
   color: #3d3d3d;
   background-color: #54BDF4;
-  transition: 0.3s ease-in-out;
-}
-#todo #homePage {
-  padding: 50px 25px;
-}
-#todo #homePage .get-started {
-  background-color: #54BDF4;
-}
-#todo #homePage .get-started:hover {
-  color: #3d3d3d;
-  background-color: #FFFFFF;
-  border: 1px solid #54BDF4;
   transition: 0.3s ease-in-out;
 }
 #todo #addTask .add-task-form .form-floating:focus-within {

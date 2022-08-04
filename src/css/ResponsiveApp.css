@@ -1,0 +1,6 @@
+/* MEDIA QUERIES */
+@media all and (max-height: 849px) {
+  #todoImg {
+    display: none;
+  }
+}
