@@ -13,7 +13,7 @@ const Footer = () => (
                 <NavLink to="/todo/add-task" className="btn" title="Go to add a task" type="button">Add <FaPlus/></NavLink>
             </IconContext.Provider>
         </div>
-            <IconContext.Provider value={{ color: "#3d3d3d", size: "20px"}}>
+            <IconContext.Provider value={{ color: "#FF6461", size: "20px"}}>
                 <button className="btn trash pe-0" title="Delete" type="button"><FaTrashAlt /></button>
             </IconContext.Provider>
     </footer>
