@@ -1,52 +1,68 @@
-// shrink banner (only display small logo) on scroll + check css code
+// change main header color on scroll 
+const changeColorOnScroll = () => {
 
-// TODO: change main header color on scroll ?
+    window.onscroll = () => {
+        scrollFunction();
+    };
 
-const shrinkFunction = () => {
-
-    window.onscroll = function () {
-        scrollFunction()
+     // for touch screens
+     window.ontouchmove = () => {
+        scrollFunction();
     };
 
     function scrollFunction() {
-        const banner = document.getElementById("todoBanner");
-        const logo = document.getElementById("todoLogo");
-        const title = document.getElementById("todoTitle");
-        const image = document.getElementById("todoImg");
-        
-        // TODO: solve marginTop pb
-        // const pageContent = document.getElementById("pageContent");
+        const mainHeader = document.getElementById("mainHeader");
+        const logo = document.getElementById("headerLogo");
 
-        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-            // banner.style.height = "100px";
-            banner.style.height = "max-content";
-            Object.assign(logo.style, {height: "100px", margin: "0 auto", paddingTop: "10px"});
-            title.style.display = "none";
-            image.style.display = "none";
+        if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+            // change header's bg color
+            mainHeader.classList.add("gradient1");
+            mainHeader.style.transition = "1s";
 
-            banner.style.transition = "0.4s";
-            logo.style.transition = "0.4s";
-            title.style.transition = "0.4s";
-            image.style.transition = "0.4s";
+            // change logo's color (gray filter)
+            logo.style.filter = "grayscale(80%)";
+            logo.style.transition = "1s";
+
         } else {
-            // banner.style.height = "500px";
-            banner.style.height = "max-content";
-            Object.assign(logo.style, {height: "180px", margin: "15px"});
-            title.style.display = "block";
-            Object.assign(image.style, {display: "block", margin: "0 auto"});
+            mainHeader.classList.remove("gradient1");
+            mainHeader.style.transition = "1s";
 
-            banner.style.transition = "0.4s";
-            logo.style.transition = "0.4s";
-            title.style.transition = "0.4s";
-            image.style.transition = "0.4s";
+            logo.style.filter = "none";
+            logo.style.transition = "1s";
+        }
+    };
+};
+
+// get mainFooter top value to set margin-bottom on page content
+const changeLayout = () => {
+
+    window.onload = () => {
+        calcMargin();
+    }
+
+    function calcMargin() {
+
+        const pageContent = document.getElementById("pageContent");
+        const mainFooter = document.getElementById("mainFooter");
+    
+        // to prevent error when back to home page, set condition
+        if (pageContent !== null && mainFooter !== null) {
+            
+            let footerTop = mainFooter.offsetTop;
+            let pageContentHeight = pageContent.offsetHeight;
+    
+            let setMB = footerTop - pageContentHeight;
+    
+            pageContent.style.marginBottom = `${setMB}px`;
+    
+            console.log(setMB);
+            return setMB;
         }
     }
 };
 
-// TODO: get main footer height to set margin-bottom on page content
-
-
 
 export {
-    shrinkFunction
+    changeColorOnScroll,
+    changeLayout
 };

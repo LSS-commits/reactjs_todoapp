@@ -3,17 +3,16 @@ import Header from './todo-components/Header';
 import Footer from './todo-components/Footer';
 import ToDoList from './todo-components/ToDoList';
 import AddTask from './todo-components/AddTask'
-// to display images with webpack, via import statement
-// import todoLogo from '../assets/todo_logo.png';
+
 // to use react router dom v5.3.0 (v6 doesn't work for this tutorial)
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // to import my dynamic data
 import {categoryData, taskData} from '../shared/DynamicData';
 // to import custom functions
-// import {shrinkFunction} from '../shared/Functions';
+import {changeLayout} from '../shared/Functions';
 
-// to shrink banner on scroll
-// shrinkFunction();
+// to set margin bottom on page content on page load
+changeLayout();
 
 class ToDoPages extends React.Component {
     render(){
