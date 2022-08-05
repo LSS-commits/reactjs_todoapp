@@ -4,7 +4,7 @@ let categoryData = [
 ];
 
 // TODO: remove category if not needed
-let taskData = [
+let initialData = [
     {
         id: 'ab57ee07',
         title: 'Professional',
@@ -38,4 +38,4 @@ let taskData = [
 ];
 
 
-export {categoryData, taskData};
+export {categoryData, initialData};

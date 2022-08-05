@@ -6,7 +6,7 @@ const ToDoList = ({tasks, match}) => {
 
     return(
         
-        // loop on taskData and display list of tasks by title
+        // loop on initialData and display list of tasks by title
         tasks.map((task) => {
 
             /* filter list of tasks for each title 

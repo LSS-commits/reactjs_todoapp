@@ -4,9 +4,15 @@ import ToDoPages from "./ToDoPages";
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import {initialData} from '../shared/DynamicData';
 
 // landing page 
 class App extends React.Component {
+
+    state = {
+        tasks: initialData
+    }
+
     render(){
         return(
             <>
