@@ -19,6 +19,9 @@
   background-image: -webkit-linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
   background-image: linear-gradient(315deg, #045de9 0%, #54BDF4 74%);
 }
+.white {
+  background-color: #FFFFFF;
+}
 .responsive-wrapper {
   width: 90%;
   margin-left: auto;
@@ -100,6 +103,7 @@
   transition: 0.3s ease-in-out;
 }
 #todo #mainHeader {
+  z-index: 99;
   height: 120px;
   position: sticky;
   top: calc(calc(120px - 70px) * -1);
@@ -120,6 +124,9 @@
 }
 #todo #pageContent {
   margin-top: 3rem;
+  /* add bottom margin before fixed-bottom navbar with js code 
+          => without margin bottom, no header shrink !
+        */
 }
 #todo #mainFooter {
   background-color: #045de9;

@@ -51,12 +51,13 @@ const changeLayout = () => {
             let footerTop = mainFooter.offsetTop;
             let pageContentHeight = pageContent.offsetHeight;
     
-            let setMB = footerTop - pageContentHeight;
+            // in case setMB is negative, make it absolute
+            let setMB = Math.abs(footerTop - pageContentHeight);
     
             pageContent.style.marginBottom = `${setMB}px`;
     
-            console.log(setMB);
-            return setMB;
+            // console.log(setMB);
+            // return setMB;
         }
     }
 };
