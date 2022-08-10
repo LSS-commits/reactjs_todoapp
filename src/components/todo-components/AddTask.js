@@ -1,18 +1,29 @@
 import React from "react";
-import CategoryPick from "./CategoryPick";
 
+// to get data from form input (via reference in input)
+let newTask;
+let category;
 
-const AddTask = ({titles}) => {
+// to prevent page reload after form submission
+const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('log : name => ' + newTask.value + ' and category => ' + category.value);
+    // TODO: assign category to new task
+    // TODO: reset form
+
+}
+
+const AddTask = ({titles}) => { 
+    
     return (
         <>
             <section id="addTask">
                 <h2 className="m-3">New Task</h2>
                 <div className="card my-5 mx-3">
-                    <form className="card-body my-3 add-task-form" onSubmit={(e) => this.handleSubmit(e)}>
+                    <form className="card-body my-3 add-task-form" onSubmit={event => handleSubmit(event)}>
                         <div className="form-group">   
                             <div className="form-floating">
-                                <input type="text" className="form-control text-muted" name="taskName" id="floatingInput" placeholder="Insert task name" required />
-                                {/* TODO: Put this back in input ref={input => this.newTask = input}  */}
+                                <input type="text" className="form-control text-muted" name="taskName" id="floatingInput" placeholder="Insert task name" ref={input => newTask = input} required />
                                 <label form="taskName" htmlFor="floatingInput">Task name</label>
                             </div>
                             {/* Pick category */}
@@ -21,13 +32,13 @@ const AddTask = ({titles}) => {
                                     <option className="" defaultValue>Pick a category...</option>
                                     {
                                         titles.map((title) => 
-                                        <CategoryPick title={title} key={title.id} />
+                                            <option value={title.name} key={title.id} ref={option => category = option}>{title.name}</option>
                                         )
                                     }
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" className="btn btn-success mt-3">Create</button>
+                        <button type="submit" className="btn createBtn mt-3">Create</button>
                     </form>
                 </div>
             </section>

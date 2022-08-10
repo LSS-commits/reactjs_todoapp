@@ -17,12 +17,12 @@ changeLayout();
 
 class ToDoPages extends React.Component {
     
-
+    /* to create a version of tasks in the state of this component */
     state = {
         tasks: initialData
     }
 
-    /* to create a new version of tasks property in the state of this component */
+    /* to toggle the completion state of the tasks */
     onToggleCompleted = (taskID) => {
 
         // map on tasks to get list of tasks by category
@@ -50,6 +50,10 @@ class ToDoPages extends React.Component {
     }
     // end function onToggleCompleted
     
+    /* to create a new task */
+    onAddTask = (newTaskName, newTaskCategory) => {
+        
+    }
 
     render(){
         return(
