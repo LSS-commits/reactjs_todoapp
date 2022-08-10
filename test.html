@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Write something in the text field to trigger a function.</p>
+
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+  var test = [];
+  test = test.push(x);
+  var element;
+  for (let i = 0; i < test.length; i++) {
+    element = test[i];
+    console.log(element);
+    return element;
+ }
+  document.getElementById("demo").innerHTML = "You wrote: " + element;
+}
+</script>
+
+</body>
+</html>
