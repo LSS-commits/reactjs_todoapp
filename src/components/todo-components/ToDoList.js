@@ -2,7 +2,7 @@ import React from "react";
 import ToDo from "./ToDo";
 
 // destructurate props to use only tasks created in DynamicData and called in App in the routes
-const ToDoList = ({tasks, match}) => {
+const ToDoList = ({tasks, match, onToggleCompleted}) => {
 
     return(
         
@@ -22,18 +22,18 @@ const ToDoList = ({tasks, match}) => {
             }
             /* do not use fragments if you already have a parent element (eg, ul or div), else unique id (key) is needed on the element */
             if (filteredTasks.length === 0) {
-                return (
+                return(
                         <ul className="list-group m-3" key={task.id}>
                             <li className="list-group-item list-title fs-5">{task.title}</li>
                             <li className="list-group-item text-muted fst-italic no-task">No task completed</li>
                         </ul>
                 )
             } else {
-                return (
+                return(
                         <ul className="list-group m-3" key={task.id}>
                             <li className="list-group-item list-title fs-5">{task.title}</li> 
                             {
-                                filteredTasks.map((item) => <ToDo key={item.taskId} item={item}/>)
+                                filteredTasks.map((item) => <ToDo key={item.taskId} item={item} onToggleCompleted={onToggleCompleted}/>)
                             }
                         </ul>
                 )

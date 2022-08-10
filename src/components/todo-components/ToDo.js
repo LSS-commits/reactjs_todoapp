@@ -14,7 +14,8 @@ class ToDo extends React.Component{
     toggleCompleted = () => {
         this.setState(previousState => ({
             completed: !previousState.completed
-        }))
+        }));
+        this.props.onToggleCompleted(this.props.item.taskId);
     }
 
     render(){
