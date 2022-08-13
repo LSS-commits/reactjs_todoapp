@@ -9,16 +9,15 @@ class AddTask extends React.Component{
     handleSubmit = (event) => {
    
     event.preventDefault();
-    console.log('log : name => ' + this.taskName.value + ' and category => ' + this.taskCategory.value);
+    // console.log('log : name => ' + this.taskName.value + ' and category => ' + this.taskCategory.value);
 
     // share new task data within the app
-    // this.props.onAddTask(this.taskName.value, this.taskCategory.value);
+    this.props.onAddTask(this.taskName.value, this.taskCategory.value);
 
     // TODO: display notification
 
     // TODO: reset form after submit (or redirect and display notification on list page)
     // this.taskForm.reset();
-    
     }
 
 

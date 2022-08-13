@@ -63,18 +63,19 @@ class ToDoPages extends React.Component {
             name: newTaskName,
             completed: false,
             category: newTaskCategory
-        }
-
+        };
 
         // inject new task in the state of the app
-        // 1) find in tasks the index of the object which title === newTaskCategory
-        let categoryIndex = this.state.tasks.find(category => category.title === newTaskCategory);
-        // console.log(categoryIndex);
+        // 1) find index of object (in tasks) where title === newTaskCategory
+        let categoryIndex = this.state.tasks.findIndex(category => category.title === newTaskCategory);
 
-        // 2) add newTask in this object's list
-        // this.setState(previousState => ({
-        //     tasks: [...previousState.tasks, newTask]
-        // }))
+        // console.log(categoryIndex);
+        // console.log(this.state.tasks[categoryIndex].list);
+        
+        // 2) update tasks
+        this.setState(previousState => ({
+            tasks: [...previousState.tasks[categoryIndex].list, newTask]
+        }));
     }
 
     render(){
