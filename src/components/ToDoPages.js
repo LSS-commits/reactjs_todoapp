@@ -52,7 +52,9 @@ class ToDoPages extends React.Component {
     
     /* to create a new task */
     onAddTask = (newTaskName, newTaskCategory) => {
-        
+        let newTask = {
+            // id: 
+        }
     }
 
     render(){

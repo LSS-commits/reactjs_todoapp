@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => (
     <footer className="d-flex justify-content-center p-3 fixed-bottom" id="mainFooter">
         <div className="btn-group">
-            <IconContext.Provider value={{ color: "#3d3d3d"}}>
+            <IconContext.Provider value={{ className: "footer-icons", color: "#3d3d3d"}}>
                 <NavLink to="/todo/" className="btn" title="Go to list" type="button">List <FaListUl /></NavLink>
                 <NavLink to="/todo/completed" className="btn" title="Go to completed tasks" type="button">Completed <FaCheck/></NavLink>
                 <NavLink to="/todo/add-task" className="btn" title="Go to add a task" type="button">Add <FaPlus/></NavLink>

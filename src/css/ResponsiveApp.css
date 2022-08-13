@@ -4,3 +4,8 @@
     display: none;
   }
 }
+@media all and (max-width: 359px) {
+  .footer-icons {
+    display: none;
+  }
+}
