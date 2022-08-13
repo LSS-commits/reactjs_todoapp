@@ -27,12 +27,12 @@ const AddTask = ({titles}) => {
                                 <label form="taskName" htmlFor="floatingInput">Task name</label>
                             </div>
                             {/* Pick category */}
-                            <div className="input-group my-3">
-                                <select className="form-select text-muted" id="inputGroupSelect03" aria-label="category select">
-                                    <option className="" defaultValue>Pick a category...</option>
+                            <div className="my-3">
+                                <label form="taskCategory">Pick a category</label>
+                                <select className="form-select text-muted my-2" id="inputGroupSelect03" aria-label="category select" ref={option => category = option} name="taskCategories">
                                     {
                                         titles.map((title) => 
-                                            <option value={title.name} key={title.id} ref={option => category = option}>{title.name}</option>
+                                            <option value={title.name} key={title.id}>{title.name}</option>
                                         )
                                     }
                                 </select>
