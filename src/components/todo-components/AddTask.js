@@ -1,7 +1,7 @@
 import React from "react";
 
 // to get data from form input (via reference in input)
-let newTask;
+let taskName;
 let taskCategory;
 
 // to reset form
@@ -10,12 +10,15 @@ let taskForm;
 // to prevent page reload and get form data after form submission
 const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('log : name => ' + newTask.value + ' and category => ' + taskCategory.value);
+    console.log('log : name => ' + taskName.value + ' and category => ' + taskCategory.value);
   
+    // share new task data within the app
+    // this.props.onAddTask(taskName.value, taskCategory.value);
+    console.log(this.props);
     // TODO: display notification
 
-    // reset form after submit
-    taskForm.reset();
+    // TODO: reset form after submit (or redirect and display notification on list page)
+    // taskForm.reset();
 }
 
 const AddTask = ({titles}) => { 
@@ -28,7 +31,7 @@ const AddTask = ({titles}) => {
                         <form className="card-body my-3 add-task-form" onSubmit={event => handleSubmit(event)} ref={form => taskForm = form}>
                             <div className="form-group">   
                                 <div className="form-floating">
-                                    <input type="text" className="form-control text-muted" name="taskName" id="floatingInput" placeholder="Task name" ref={input => newTask = input} required />
+                                    <input type="text" className="form-control text-muted" name="taskName" id="floatingInput" placeholder="Task name" ref={input => taskName = input} required />
                                     <label className="text-muted" form="taskName" htmlFor="floatingInput">Task name</label>
                                 </div>
                                 {/* Pick category */}

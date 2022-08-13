@@ -11,6 +11,10 @@ import {categoryData, initialData} from '../shared/DynamicData';
 // to import custom functions
 import {changeLayout} from '../shared/Functions';
 
+// to generate unique ids for tasks
+import uniqueid from 'uniqueid';
+
+
 // to set margin bottom on page content on page load
 changeLayout();
 
@@ -52,9 +56,25 @@ class ToDoPages extends React.Component {
     
     /* to create a new task */
     onAddTask = (newTaskName, newTaskCategory) => {
+
+        // create new task object
         let newTask = {
-            // id: 
+            taskId: uniqueid(),
+            name: newTaskName,
+            completed: false,
+            category: newTaskCategory
         }
+
+
+        // inject new task in the state of the app
+        // 1) find in tasks the index of the object which title === newTaskCategory
+        let categoryIndex = this.state.tasks.find(category => category.title === newTaskCategory);
+        // console.log(categoryIndex);
+
+        // 2) add newTask in this object's list
+        // this.setState(previousState => ({
+        //     tasks: [...previousState.tasks, newTask]
+        // }))
     }
 
     render(){
@@ -66,7 +86,7 @@ class ToDoPages extends React.Component {
                         <Header />
                         <div id="pageContent">
                             <Switch>
-                                <Route path="/todo/add-task" render={(props) => <AddTask {...props} titles={categoryData} />}/>
+                                <Route path="/todo/add-task" render={(props) => <AddTask {...props} titles={categoryData} onAddTask={this.onAddTask}/>}/>
                                 {/* <Route path="/add-task" component={AddTask}/> */}
                                 {/* /:filter? to display only tasks that match the completed filter (Props > match > params > filter ) after click on button Completed. DOESN'T WORK WITH react-router-dom v6, with v5.3 ok */}
                                 <Route path="/todo/:filter?" render={(props) => <ToDoList {...props} tasks={this.state.tasks} onToggleCompleted={this.onToggleCompleted}/>}/>
