@@ -1,25 +1,23 @@
 import React from "react";
 import CategoryOption from "./CategoryOption";
-import {categoryData} from '../../shared/DynamicData';
-
+import {categoryData} from "../../shared/DynamicData";
 
 class AddTask extends React.Component{
 
-    // to prevent page reload and get form data after form submission
+    // to handle form submission
     handleSubmit = (event) => {
-   
-    event.preventDefault();
-    // console.log('log : name => ' + this.taskName.value + ' and category => ' + this.taskCategory.value);
+        event.preventDefault();
 
-    // share new task data within the app
-    this.props.onAddTask(this.taskName.value, this.taskCategory.value);
+        // share new task data within the app
+        this.props.onAddTask(this.taskName.value, this.taskCategory.value);
 
-    // TODO: display notification
+        // display notification
+        const notification = document.getElementById("notification");
+        notification.classList.toggle("d-none");
 
-    // TODO: reset form after submit (or redirect and display notification on list page)
-    // this.taskForm.reset();
-    }
-
+        // redirect to list page
+        setTimeout(() => {this.props.history.push('/todo/')}, 3000);
+    };
 
     render(){
         return (
@@ -43,6 +41,12 @@ class AddTask extends React.Component{
                         <button type="submit" className="btn createBtn mt-3">Create</button>
                     </form>
                 </div>
+                {/* Notification */}
+                <div className="d-none notifEffect" id="notification">
+                    <p className="lead text-success">New task added</p>
+                    <small className="">You're about to be redirected to list page</small>
+                </div>
+                {/* End Notification */}    
             </section>
         )
     }

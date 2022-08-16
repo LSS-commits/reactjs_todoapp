@@ -2,4 +2,12 @@
 
 [Using tutorial by Damien Bruyndonckx](https://fr.linkedin.com/learning/l-essentiel-de-react-js-2/)
 
-Create new tasks = https://fr.linkedin.com/learning/l-essentiel-de-react-js-2/creer-de-nouvelles-taches?autoplay=true&trk=learning-course_tocItem&upsellOrderOrigin=default_guest_learning
+Comprendre le cycle de vie des composants = https://fr.linkedin.com/learning/l-essentiel-de-react-js-2/comprendre-le-cycle-de-vie-des-composants?autoplay=true&trk=learning-course_tocItem&upsellOrderOrigin=default_guest_learning
+
+PROBABLE TODO: 
+- persist data in localstorage ? 
+- add login (and logout, destroy user's data)?
+- remove default initial data, only keep examples
+- add task page or task modal => timer for task completion + use API for music
+- add spiner for smoothier transition betwen homepage and todopages
+- re-adjust on bottom margin

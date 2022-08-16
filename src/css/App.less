@@ -12,6 +12,7 @@
 @color5 : #DC3545;
 // @color5 : #f56262; // logo's red shirt
 @color6 : #ededed;
+@color7 : #e7f3ed; // light bootstrap green
 
 // gradients rulesets
 @gradient1: {
@@ -69,6 +70,10 @@
     h5,
     h6 {
         padding: 15px;
+    }
+
+    p{
+        word-wrap: break-word;
     }
 }
 
@@ -213,6 +218,20 @@
             border: 1px solid @color3;
             transition: 0.3s ease-in-out;
         }
+        #notification {
+            background-color: @color7;
+            border-radius: 0.25rem;
+            width: max-content;
+            margin: 0 auto;
+            padding: 15px; 
+        } 
+        // fadein animation before redirection
+        .notifEffect {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0}
+            100% {opacity: 1}
+        }
     }
-
 }

@@ -25,7 +25,7 @@ class ToDoPages extends React.Component {
         tasks: initialData
     }
 
-    /* to toggle the completion state of the tasks */
+    /* to toggle the state of completion of the tasks */
     onToggleCompleted = (taskID) => {
 
         // map on tasks to get list of tasks by category
@@ -50,7 +50,7 @@ class ToDoPages extends React.Component {
             return taskToUpdate;
         })
         // end map
-    }
+    };
     // end function onToggleCompleted
     
     /* to create a new task */
@@ -75,7 +75,22 @@ class ToDoPages extends React.Component {
                 item => categoryObject.id === item.id? {id: item.id, title: item.title, list:[...item.list, newTask]}: item
             )
         }));
-    }
+    };
+    // end function onAddTask
+
+    /* to delete a completed task */
+    onDeleteCompleted = () => {
+        // filter to keep only the tasks that aren't completed
+        this.setState(previousState => ({
+            tasks: previousState.tasks.map(
+                item => {
+                    let newListState = item.list.filter(task => !task.completed)
+                    return {id: item.id, title: item.title, list: newListState}
+                }
+            )
+        }));
+    };
+    // end function onDeleteCompleted
 
     render(){
         return(
@@ -92,7 +107,7 @@ class ToDoPages extends React.Component {
                                 <Route path="/todo/:filter?" render={(props) => <ToDoList {...props} tasks={this.state.tasks} onToggleCompleted={this.onToggleCompleted}/>}/>
                             </Switch>
                         </div>
-                        <Footer/>
+                        <Footer onDeleteCompleted={this.onDeleteCompleted}/>
                     </BrowserRouter>
                 {/* </React.StrictMode> */}
             </section>   
