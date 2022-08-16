@@ -12,8 +12,7 @@ import {initialData} from '../shared/DynamicData';
 import {changeLayout} from '../shared/Functions';
 
 // to generate unique ids for tasks
-import uniqueid from 'uniqueid';
-
+import uniqid from "uniqid";
 
 // to set margin bottom on page content on page load
 changeLayout();
@@ -59,22 +58,22 @@ class ToDoPages extends React.Component {
 
         // create new task object
         let newTask = {
-            taskId: uniqueid(),
+            /* generate unique id using dependency */
+            taskId: uniqid(), 
             name: newTaskName,
             completed: false,
             category: newTaskCategory
         };
 
         // inject new task in the state of the app
-        // 1) find index of object (in tasks) where title === newTaskCategory
-        let categoryIndex = this.state.tasks.findIndex(category => category.title === newTaskCategory);
+        // 1) find object (in tasks) where title === newTaskCategory
+        let categoryObject = this.state.tasks.find(category => category.title === newTaskCategory);
 
-        // console.log(categoryIndex);
-        // console.log(this.state.tasks[categoryIndex].list);
-        
-        // 2) update tasks
+        // 2) update state.tasks
         this.setState(previousState => ({
-            tasks: [...previousState.tasks[categoryIndex].list, newTask]
+            tasks: previousState.tasks.map(
+                item => categoryObject.id === item.id? {id: item.id, title: item.title, list:[...item.list, newTask]}: item
+            )
         }));
     }
 
