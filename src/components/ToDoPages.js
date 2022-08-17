@@ -7,15 +7,13 @@ import AddTask from './todo-components/AddTask'
 // to use react router dom v5.3.0 (v6 doesn't work for this tutorial)
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // to import my dynamic data
-import {initialData} from '../shared/DynamicData';
-// to import custom functions
-import {changeLayout} from '../shared/Functions';
+import {initialData} from '../shared/Data';
+
+// to change colors of header elements on scroll (+ header shrinks with css code)
+import { changeColorOnScroll } from "../shared/Functions";
 
 // to generate unique ids for tasks
 import uniqid from "uniqid";
-
-// to set margin bottom on page content on page load
-changeLayout();
 
 
 class ToDoPages extends React.Component {
@@ -98,7 +96,7 @@ class ToDoPages extends React.Component {
                 {/* REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION */}
                 {/* <React.StrictMode> */}
                     <BrowserRouter>
-                        <Header />
+                        <Header changeColorOnScroll={changeColorOnScroll()}/>
                         <div id="pageContent">
                             <Switch>
                                 <Route path="/todo/add-task" render={(props) => <AddTask {...props} onAddTask={this.onAddTask}/>}/>

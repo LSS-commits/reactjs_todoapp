@@ -1,11 +1,7 @@
 import React from "react";
 import todoLogo from '../../assets/todo_logo.png';
 import { IconContext } from "react-icons";
-import {FaPowerOff} from 'react-icons/fa';
-import { changeColorOnScroll } from "../../shared/Functions";
-
-// change colors of elements on scroll (+ header shrinks with css code)
-changeColorOnScroll();
+import { FaPowerOff } from 'react-icons/fa';
 
 const Header = () => (
     <header id="mainHeader" className="header-outer">

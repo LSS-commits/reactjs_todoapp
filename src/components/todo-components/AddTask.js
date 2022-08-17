@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryOption from "./CategoryOption";
-import {categoryData} from "../../shared/DynamicData";
+import {categoryData} from "../../shared/Data";
 
 class AddTask extends React.Component{
 
