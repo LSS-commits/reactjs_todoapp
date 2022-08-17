@@ -8,13 +8,11 @@ import AddTask from './todo-components/AddTask'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // to import my dynamic data
 import {initialData} from '../shared/Data';
+// to generate unique ids for tasks
+import uniqid from 'uniqid';
 
 // to change colors of header elements on scroll (+ header shrinks with css code)
-import { changeColorOnScroll } from "../shared/Functions";
-
-// to generate unique ids for tasks
-import uniqid from "uniqid";
-
+import { changeColorOnScroll } from '../shared/Functions';
 
 class ToDoPages extends React.Component {
     
@@ -91,6 +89,9 @@ class ToDoPages extends React.Component {
     // end function onDeleteCompleted
 
     render(){
+        // lifecycle test
+        console.log("render works");
+
         return(
             <section id="todo">
                 {/* REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION */}

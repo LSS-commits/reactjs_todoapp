@@ -1,6 +1,6 @@
-import React from "react";
-import Home from "./Home";
-import ToDoPages from "./ToDoPages";
+import React from 'react';
+import Home from './Home';
+import ToDoPages from './ToDoPages';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import {initialData} from '../shared/Data';
 

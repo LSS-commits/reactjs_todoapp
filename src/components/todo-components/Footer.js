@@ -1,8 +1,8 @@
-import React from "react";
-import { IconContext } from "react-icons";
+import React from 'react';
+import { IconContext } from 'react-icons';
 import {FaListUl, FaCheck, FaPlus, FaTrashAlt} from 'react-icons/fa';
 // to generate links compatible with React
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Footer = ({onDeleteCompleted}) => (
     <footer className="d-flex justify-content-center p-3 fixed-bottom" id="mainFooter">

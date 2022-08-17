@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import todoLogo from '../../assets/todo_logo.png';
-import { IconContext } from "react-icons";
+import { IconContext } from 'react-icons';
 import { FaPowerOff } from 'react-icons/fa';
 
 const Header = () => (

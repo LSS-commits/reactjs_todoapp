@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 // to display images with webpack, via import statement
 import todoLogo from '../assets/todo_logo.png';
 import todoImg from '../assets/todo_img.png';
-import { IconContext } from "react-icons";
+import { IconContext } from 'react-icons';
 import {FaDiscord, FaTwitter, FaLinkedin} from 'react-icons/fa';
 
 

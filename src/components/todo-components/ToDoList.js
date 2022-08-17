@@ -1,5 +1,5 @@
-import React from "react";
-import ToDo from "./ToDo";
+import React from 'react';
+import ToDo from './ToDo';
 
 // destructurate props to use only tasks created in Data and called in App in the routes
 const ToDoList = ({tasks, match, onToggleCompleted}) => {
