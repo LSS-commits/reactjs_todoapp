@@ -3,7 +3,6 @@ let categoryData = [
     {id: 'e681609a', name: 'Personal'}
 ];
 
-// TODO: remove category if not needed
 let initialData = [
     {
         id: 'ab57ee07',
@@ -25,16 +24,6 @@ let initialData = [
             {taskId: 'cbe25877', name: 'Do laundry', completed: false, category: 'Personal'}
         ]
     }
-    // {
-    //     id: 'f853dc58',
-    //     title: 'Test',
-    //     list: 
-    //     [
-    //         {taskId: '7ccdfq47', name: 'Wash dishes', completed: false, category: 'Personal'},
-    //         {taskId: 'f1672k61', name: 'Cardio work out', completed: false, category: 'Personal'},
-    //         {taskId: 'cbea5877', name: 'Do laundry', completed: false, category: 'Personal'}
-    //     ]
-    // }
 ];
 
 

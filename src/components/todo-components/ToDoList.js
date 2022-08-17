@@ -21,14 +21,14 @@ const ToDoList = ({tasks, match, onToggleCompleted}) => {
                     filteredTasks = task.list;
             }
             /* do not use fragments if you already have a parent element (eg, ul or div), else unique id (key) is needed on the element */
-            if (filteredTasks.length === 0) {
+            if (filteredTasks.length === 0){
                 return(
                         <ul className="list-group m-3" key={task.id}>
                             <li className="list-group-item list-title fs-5">{task.title}</li>
-                            <li className="list-group-item text-muted fst-italic no-task">No task completed</li>
+                            <li className="list-group-item text-muted fst-italic no-task">No task to display</li>
                         </ul>
-                )
-            } else {
+                    )
+            }else{
                 return(
                         <ul className="list-group m-3" key={task.id}>
                             <li className="list-group-item list-title fs-5">{task.title}</li> 
@@ -36,15 +36,13 @@ const ToDoList = ({tasks, match, onToggleCompleted}) => {
                                 filteredTasks.map((item) => <ToDo key={item.taskId} item={item} onToggleCompleted={onToggleCompleted}/>)
                             }
                         </ul>
-                )
+                    )
             }
             // end else
         })
         // end tasks map
-
     );
     // end todolist return
-
 }
 
 export default ToDoList;  
