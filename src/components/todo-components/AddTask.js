@@ -23,6 +23,12 @@ class AddTask extends React.Component{
         return (
             <section id="addTask">
                 <h2 className="m-3">New Task</h2>
+                {/* Notification */}
+                <div className="d-none notifEffect" id="notification">
+                    <p className="lead text-success">New task added</p>
+                    <small className="">You're about to be redirected to list page</small>
+                </div>
+                {/* End Notification */}  
                 <div className="card my-5 mx-3">
                     <form className="card-body my-3 add-task-form" onSubmit={event => this.handleSubmit(event)} ref={form => this.taskForm = form}>
                         <div className="form-group">   
@@ -40,13 +46,7 @@ class AddTask extends React.Component{
                         </div>
                         <button type="submit" className="btn createBtn mt-3">Create</button>
                     </form>
-                </div>
-                {/* Notification */}
-                <div className="d-none notifEffect" id="notification">
-                    <p className="lead text-success">New task added</p>
-                    <small className="">You're about to be redirected to list page</small>
-                </div>
-                {/* End Notification */}    
+                </div>  
             </section>
         )
     }

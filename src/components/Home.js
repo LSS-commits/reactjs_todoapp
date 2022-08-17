@@ -3,7 +3,7 @@ import React from 'react';
 import todoLogo from '../assets/todo_logo.png';
 import todoImg from '../assets/todo_img.png';
 import { IconContext } from 'react-icons';
-import {FaDiscord, FaTwitter, FaLinkedin} from 'react-icons/fa';
+import { FaDiscord, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 class Home extends React.Component{
     render(){

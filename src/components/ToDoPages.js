@@ -15,15 +15,30 @@ import uniqid from 'uniqid';
 import { changeColorOnScroll } from '../shared/Functions';
 
 // to display spinner
-// import FetchingSpinner from './FetchingSpinner';
+import FetchingSpinner from './FetchingSpinner';
 
 
 class ToDoPages extends React.Component {
     
-    /* to create a version of tasks in the state of this component */
+    /* to manage the state of this component */
     state = {
-        tasks: initialData,
-        fetching: true
+        tasks: [],
+        fetchingData: true
+    }
+
+    /* to simulate delay when fetching data from a server (display spinner before displaying page with data) */
+    // called when the component exists on the browser's page
+    componentDidMount = () => {
+        // random delay between 1 and 5s
+        let delay = Math.floor(Math.random() * 5000);
+
+        // TODO: DO NOT USE setTimeout IN PRO APP AS IT CAUSES PERFORMANCE ISSUES
+        setTimeout(() => {
+            this.setState({
+                fetchingData: false,
+                tasks: initialData
+            })
+        }, delay)
     }
 
     /* to toggle the state of completion of the tasks */
@@ -97,7 +112,7 @@ class ToDoPages extends React.Component {
         return(
             <section id="todo">
 
-                {/* { this.state.fetching ? <FetchingSpinner /> : null } */}
+                { this.state.fetchingData ? <FetchingSpinner /> : null }
 
                 {/* REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION */}
                 {/* <React.StrictMode> */}
