@@ -8,6 +8,4 @@ TODO:
 - persist data in localstorage? 
 - add login (and logout, destroy user's data on logout)?
 - remove default initial data, only keep example tasks in each category
-- add task page or task modal => timer for task completion + use API for music
-- add spinner for smoothier transition betwen homepage and todopages
-- re-adjust bottom margin
+- add template for task page or task modal => timer for task completion + use API for music
