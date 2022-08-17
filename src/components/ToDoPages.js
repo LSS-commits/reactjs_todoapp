@@ -14,11 +14,16 @@ import uniqid from 'uniqid';
 // to change colors of header elements on scroll (+ header shrinks with css code)
 import { changeColorOnScroll } from '../shared/Functions';
 
+// to display spinner
+// import FetchingSpinner from './FetchingSpinner';
+
+
 class ToDoPages extends React.Component {
     
     /* to create a version of tasks in the state of this component */
     state = {
-        tasks: initialData
+        tasks: initialData,
+        fetching: true
     }
 
     /* to toggle the state of completion of the tasks */
@@ -89,11 +94,11 @@ class ToDoPages extends React.Component {
     // end function onDeleteCompleted
 
     render(){
-        // lifecycle test
-        console.log("render works");
-
         return(
             <section id="todo">
+
+                {/* { this.state.fetching ? <FetchingSpinner /> : null } */}
+
                 {/* REACT STRICT MODE 18 IS INCOMPATIBLE WITH REACT 5, PB WITH NAVIGATION */}
                 {/* <React.StrictMode> */}
                     <BrowserRouter>

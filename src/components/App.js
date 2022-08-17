@@ -7,7 +7,6 @@ import {initialData} from '../shared/Data';
 // to set margin bottom on page content on page load
 import {changeLayout} from '../shared/Functions';
 
-
 // landing page 
 class App extends React.Component {
 

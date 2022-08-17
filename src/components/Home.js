@@ -5,7 +5,6 @@ import todoImg from '../assets/todo_img.png';
 import { IconContext } from 'react-icons';
 import {FaDiscord, FaTwitter, FaLinkedin} from 'react-icons/fa';
 
-
 class Home extends React.Component{
     render(){
         return(
