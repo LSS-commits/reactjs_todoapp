@@ -8,5 +8,9 @@ TODO:
 - persist data in localstorage
 - add login (and logout, destroy user's data on logout)
 - remove default initial data, only keep example tasks in each category
+
+- OR [use DataStax/Astra with ntlify functions](https://github.com/DataStax-Examples/todo-astra-jamstack-netlify)
+
+
 - add template for task page or task modal => timer for task completion + use music API
 - deploy on netlify
