@@ -1,13 +1,15 @@
-### TODO App - React ###
+# TODO App - React #
+Todo app using React, CSS Less.
 
 [Tutorial by Damien Bruyndonckx](https://fr.linkedin.com/learning/l-essentiel-de-react-js-2/)
 
-# TODO !
+![Main pages](https://github.com/LSS-commits/reactjs_todoapp/blob/main/pages.png?raw=true)
+
+## TODO !
 Data
 - [use JSON server as fake REST API](https://www.webtips.dev/react-json-server)
 - OR use Firebase
-- persist user data in localstorage
-- add registration and authentication (on logout, destroy user's data in localstorage)
+- add registration and authentication
 - remove default initial data, only keep example tasks in each category
 
 Functionalities

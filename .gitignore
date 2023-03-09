@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/static.html
+/src/shared/LifecycleMethods.js
