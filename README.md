@@ -1,9 +1,13 @@
 # TODO App - React #
-Todo app using React, CSS Less.
+Todo app using React and CSS Less.
 
 [Tutorial by Damien Bruyndonckx](https://fr.linkedin.com/learning/l-essentiel-de-react-js-2/)
 
 ![Main pages](https://github.com/LSS-commits/reactjs_todoapp/blob/main/pages.png?raw=true)
+
+
+[Visualize project](https://ldev-todo.onrender.com)
+
 
 ## TODO !
 Data
@@ -18,5 +22,3 @@ Functionalities
 UI/UX
 - page layout: recalculate margin
 - add hover on navbar elements
-
-Deploy
