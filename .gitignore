@@ -24,3 +24,4 @@ yarn-error.log*
 
 /src/static.html
 /src/shared/LifecycleMethods.js
+/deploy_log_17OCT2023.png

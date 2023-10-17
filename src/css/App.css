@@ -4,14 +4,14 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notosans/v27/o-0NIpQlx3QUlC5A4PNjThZlYw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/notosans/v32/o-0NIpQlx3QUlC5A4PNjThZlYw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/notosans/v32/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
 }
 .gradient1 {
   background-color: #045de9;
